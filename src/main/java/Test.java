@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by srk on 7/21/16.
- */
 public class Test {
 
     public static void main(String[] args) {
