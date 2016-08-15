@@ -7,9 +7,9 @@ object RationalNumber {
         val number1 = new RationalNumber(1, 2)
         val number2 = new RationalNumber(1, 3)
         println(number1 + number2)
-        println(number1 + 2)
 
         implicit def intToRational(num: Int): RationalNumber = new RationalNumber(num)
+        println(number1 + 2)
         println(2 + number1)
     }
 }
