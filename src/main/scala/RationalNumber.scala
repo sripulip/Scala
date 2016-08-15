@@ -28,8 +28,6 @@ class RationalNumber(numer: Int, denom: Int) {
         this.numerator * that.denominator + this.denominator * that.numerator,
         this.denominator * that.denominator)
 
-    def +(that: Int): RationalNumber = new RationalNumber(this.numerator + that * this.denominator, this.denominator)
-
     override def toString: String = numerator + "/" + denominator
 
     @tailrec
