@@ -1,4 +1,5 @@
 object Closure {
+
   def main(args: Array[String]): Unit = {
     val input = 10
     val more1 = 5

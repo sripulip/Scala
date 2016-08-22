@@ -19,4 +19,3 @@ println("list1.mkString -> " + list1.mkString(", "))
 println("list1 -> " + list1)
 
 println("\n///////////////////////////////////////////////\n")
-
