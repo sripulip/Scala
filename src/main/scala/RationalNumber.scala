@@ -11,12 +11,20 @@ object RationalNumber {
     implicit def intToRational(num: Int): RationalNumber = new RationalNumber(num)
     println(number1 add 2)
     println(2 add number1)
+
+    println(number1.negative)
+    println(number1.subtract(new RationalNumber(1, 1)))
   }
 }
 
-class RationalNumber(numer: Int, denom: Int) {
+class RationalNumber(val numer: Int, val denom: Int) {
 
   require(denom != 0)
+
+  @tailrec
+  private def getGcd(n: Int, d: Int): Int = {
+    if (d == 0) n else getGcd(d, n % d)
+  }
 
   private val gcd = getGcd(numer.abs, denom.abs)
   val numerator = numer / gcd
@@ -28,10 +36,9 @@ class RationalNumber(numer: Int, denom: Int) {
     this.numerator * that.denominator + this.denominator * that.numerator,
     this.denominator * that.denominator)
 
-  override def toString: String = numerator + "/" + denominator
+  def negative: RationalNumber = new RationalNumber(-numerator, denominator)
 
-  @tailrec
-  private def getGcd(n: Int, d: Int): Int = {
-    if (d == 0) n else getGcd(d, n % d)
-  }
+  def subtract(that: RationalNumber): RationalNumber = add(that.negative)
+
+  override def toString: String = numerator + "/" + denominator
 }
