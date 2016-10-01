@@ -1,6 +1,6 @@
 import scala.annotation.tailrec
 
-object List {
+object MyList {
   def main(args: Array[String]): Unit = {
 
     @tailrec
@@ -11,7 +11,15 @@ object List {
 
     val list = new Cons(1, new Cons(2, new Cons(3, new Cons(4, new Nil))))
     println(nthElement(2, list))
-    println(nthElement(-1, list))
+    println(nthElement(1, list))
+
+
+    def append[T](list1: List[T], list2: List[T]): List[T] =
+      list1 match {
+        case List() => list2
+        case x :: xs1 => x :: append(xs1, list2)
+      }
+    println(append(List(1, 2, 3), List(4, 5, 6)))
   }
 }
 
