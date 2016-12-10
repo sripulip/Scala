@@ -3,7 +3,7 @@ import scala.annotation.tailrec
 object NewtonsSquareRoot {
 
   def main(args: Array[String]): Unit = {
-    val inputNumber = 9
+    val inputNumber = 6
     println(new NewtonsSquareRoot().findSquareRoot(inputNumber))
   }
 }
@@ -27,5 +27,4 @@ class NewtonsSquareRoot() {
 
     findSquareRoot(guess)
   }
-
 }
