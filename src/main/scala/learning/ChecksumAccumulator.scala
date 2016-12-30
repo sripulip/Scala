@@ -1,3 +1,5 @@
+package learning
+
 import scala.collection.mutable
 
 object ChecksumAccumulator {

@@ -1,3 +1,5 @@
+package learning
+
 object Closure {
 
   def main(args: Array[String]): Unit = {

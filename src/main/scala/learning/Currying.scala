@@ -1,5 +1,7 @@
+package learning
+
 /**
-  * See `HigherOrderFunctions.scala`
+  * See `learning.HigherOrderFunctions.scala`
   */
 object Currying {
 

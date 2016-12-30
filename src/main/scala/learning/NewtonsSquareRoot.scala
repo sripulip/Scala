@@ -1,3 +1,5 @@
+package learning
+
 import scala.annotation.tailrec
 
 object NewtonsSquareRoot {

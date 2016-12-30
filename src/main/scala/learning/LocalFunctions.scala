@@ -1,3 +1,5 @@
+package learning
+
 import scala.io.Source
 
 object LocalFunctions {

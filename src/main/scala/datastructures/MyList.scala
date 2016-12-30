@@ -1,3 +1,5 @@
+package datastructures
+
 import scala.annotation.tailrec
 
 object MyList {
@@ -29,13 +31,13 @@ trait ConsList[T] {
   def tail: ConsList[T]
 }
 
-class Cons[T](val head: T, val tail: ConsList[T]) extends ConsList[T] {
-  override def isEmpty: Boolean = false
-  def singletonList(element: T): ConsList[T] = new Cons[T](element, new Nil[T])
-}
-
 class Nil[T] extends ConsList[T] {
   override def isEmpty: Boolean = true
   override def head: Nothing = throw new NoSuchElementException("Nil.head doesn't exist")
   override def tail: Nothing = throw new NoSuchElementException("Nil.tail doesn't exist")
+}
+
+class Cons[T](val head: T, val tail: ConsList[T]) extends ConsList[T] {
+  override def isEmpty: Boolean = false
+  def singletonList(element: T): ConsList[T] = new Cons[T](element, new Nil[T])
 }

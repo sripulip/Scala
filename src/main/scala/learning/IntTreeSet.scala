@@ -1,3 +1,5 @@
+package learning
+
 object IntTreeSet {
   def main(args: Array[String]): Unit = {
     val test1 = new NonEmptySubTree(1, EmptySubTree, EmptySubTree)

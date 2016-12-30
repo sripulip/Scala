@@ -1,3 +1,5 @@
+package learning
+
 object HigherOrderFunctions {
 
   def main(args: Array[String]): Unit = {
